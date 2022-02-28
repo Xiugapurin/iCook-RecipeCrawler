@@ -3,7 +3,7 @@ import dns
 
 class Connection():
     def __init__(self, *args, **kwargs):
-        self.client = pymongo.MongoClient("mongodb+srv://PuddingTeacher:D2TBaphcSrMCldaC@puddingdong.7odsp.mongodb.net/PudDingDong?retryWrites=true&w=majority")
+        self.client = pymongo.MongoClient(MyConnectionString)
         self.db = self.client.PuddingTeacher
         self.recipe = self.db.Recipe
         self.recipeURL = self.db.RecipeURL
